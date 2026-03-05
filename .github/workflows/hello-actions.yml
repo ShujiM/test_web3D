@@ -1,0 +1,11 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} が自動化テストを実行中 🚀
+
+on: [push] # コードがPushされたら実行
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # GitHubが用意したLinuxマシンで動かす
+    steps:
+      - name: 挨拶を表示する
+        run: echo "Hello, GitHub Actions! 自動化の第一歩です。"
