@@ -1,0 +1,55 @@
+name: Convert Images to WebP
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+    paths:
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+  pull_request:
+    branches:
+      - main
+      - develop
+    paths:
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+
+jobs:
+  convert-to-webp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install cwebp
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y webp
+
+      - name: Convert images to WebP
+        run: |
+          find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) ! -path "./node_modules/*" ! -path "./.git/*" | while read file; do
+            output="${file%.*}.webp"
+            cwebp "$file" -o "$output"
+            echo "Converted: $file -> $output"
+          done
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff --staged --quiet || git commit -m "ci: convert images to WebP format"
+
+      - name: Push changes
+        run: git push
