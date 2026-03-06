@@ -38,10 +38,14 @@ jobs:
 
       - name: Convert images to WebP
         run: |
-          find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) ! -path "./node_modules/*" ! -path "./.git/*" | while read file; do
+          find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) ! -path "./node_modules/*" ! -path "./.git/*" -print0 | while IFS= read -r -d '' file; do
             output="${file%.*}.webp"
-            cwebp "$file" -o "$output"
-            echo "Converted: $file -> $output"
+            if cwebp "$file" -o "$output" 2>&1; then
+              echo "Converted: $file -> $output"
+              rm "$file"
+            else
+              echo "Warning: Failed to convert $file"
+            fi
           done
 
       - name: Commit changes
