@@ -1,0 +1,271 @@
+﻿2026-03-06T03:36:44.9860302Z Current runner version: '2.332.0'
+2026-03-06T03:36:44.9885136Z ##[group]Runner Image Provisioner
+2026-03-06T03:36:44.9886507Z Hosted Compute Agent
+2026-03-06T03:36:44.9887408Z Version: 20260213.493
+2026-03-06T03:36:44.9888404Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-06T03:36:44.9889806Z Build Date: 2026-02-13T00:28:41Z
+2026-03-06T03:36:44.9891137Z Worker ID: {bbb02f6d-014a-4ea2-91a2-acca0175c25f}
+2026-03-06T03:36:44.9892492Z Azure Region: northcentralus
+2026-03-06T03:36:44.9893583Z ##[endgroup]
+2026-03-06T03:36:44.9895865Z ##[group]Operating System
+2026-03-06T03:36:44.9896865Z Ubuntu
+2026-03-06T03:36:44.9897775Z 24.04.3
+2026-03-06T03:36:44.9898452Z LTS
+2026-03-06T03:36:44.9899223Z ##[endgroup]
+2026-03-06T03:36:44.9899911Z ##[group]Runner Image
+2026-03-06T03:36:44.9901163Z Image: ubuntu-24.04
+2026-03-06T03:36:44.9902037Z Version: 20260302.42.1
+2026-03-06T03:36:44.9904159Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260302.42/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-06T03:36:44.9905781Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260302.42
+2026-03-06T03:36:44.9906730Z ##[endgroup]
+2026-03-06T03:36:44.9907904Z ##[group]GITHUB_TOKEN Permissions
+2026-03-06T03:36:44.9909739Z Contents: write
+2026-03-06T03:36:44.9910705Z Metadata: read
+2026-03-06T03:36:44.9911338Z PullRequests: write
+2026-03-06T03:36:44.9911831Z ##[endgroup]
+2026-03-06T03:36:44.9913964Z Secret source: Actions
+2026-03-06T03:36:44.9914657Z Prepare workflow directory
+2026-03-06T03:36:45.0384448Z Prepare all required actions
+2026-03-06T03:36:45.0439759Z Getting action download info
+2026-03-06T03:36:45.3268922Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-06T03:36:45.5825245Z Complete job name: convert-to-webp
+2026-03-06T03:36:45.6696844Z ##[group]Run actions/checkout@v4
+2026-03-06T03:36:45.6697683Z with:
+2026-03-06T03:36:45.6698060Z   fetch-depth: 0
+2026-03-06T03:36:45.6698481Z   repository: ShujiM/test_web3D
+2026-03-06T03:36:45.6699133Z   token: ***
+2026-03-06T03:36:45.6699521Z   ssh-strict: true
+2026-03-06T03:36:45.6699909Z   ssh-user: git
+2026-03-06T03:36:45.6700487Z   persist-credentials: true
+2026-03-06T03:36:45.6700933Z   clean: true
+2026-03-06T03:36:45.6701327Z   sparse-checkout-cone-mode: true
+2026-03-06T03:36:45.6701809Z   fetch-tags: false
+2026-03-06T03:36:45.6702208Z   show-progress: true
+2026-03-06T03:36:45.6702611Z   lfs: false
+2026-03-06T03:36:45.6702973Z   submodules: false
+2026-03-06T03:36:45.6703375Z   set-safe-directory: true
+2026-03-06T03:36:45.6704053Z ##[endgroup]
+2026-03-06T03:36:45.7836272Z Syncing repository: ShujiM/test_web3D
+2026-03-06T03:36:45.7838091Z ##[group]Getting Git version info
+2026-03-06T03:36:45.7838990Z Working directory is '/home/runner/work/test_web3D/test_web3D'
+2026-03-06T03:36:45.7840281Z [command]/usr/bin/git version
+2026-03-06T03:36:45.7925170Z git version 2.53.0
+2026-03-06T03:36:45.7953118Z ##[endgroup]
+2026-03-06T03:36:45.7968539Z Temporarily overriding HOME='/home/runner/work/_temp/5eeb967e-29e6-4c62-984d-1174d01f0bdd' before making global git config changes
+2026-03-06T03:36:45.7970397Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-06T03:36:45.7982620Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test_web3D/test_web3D
+2026-03-06T03:36:45.8026241Z Deleting the contents of '/home/runner/work/test_web3D/test_web3D'
+2026-03-06T03:36:45.8030361Z ##[group]Initializing the repository
+2026-03-06T03:36:45.8034779Z [command]/usr/bin/git init /home/runner/work/test_web3D/test_web3D
+2026-03-06T03:36:45.8184776Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-06T03:36:45.8186341Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-06T03:36:45.8187498Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-06T03:36:45.8188684Z hint: call:
+2026-03-06T03:36:45.8189417Z hint:
+2026-03-06T03:36:45.8190492Z hint: 	git config --global init.defaultBranch <name>
+2026-03-06T03:36:45.8191514Z hint:
+2026-03-06T03:36:45.8192180Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-06T03:36:45.8193288Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-06T03:36:45.8194155Z hint:
+2026-03-06T03:36:45.8194591Z hint: 	git branch -m <name>
+2026-03-06T03:36:45.8195330Z hint:
+2026-03-06T03:36:45.8196071Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-06T03:36:45.8197334Z Initialized empty Git repository in /home/runner/work/test_web3D/test_web3D/.git/
+2026-03-06T03:36:45.8202516Z [command]/usr/bin/git remote add origin https://github.com/ShujiM/test_web3D
+2026-03-06T03:36:45.8239772Z ##[endgroup]
+2026-03-06T03:36:45.8240743Z ##[group]Disabling automatic garbage collection
+2026-03-06T03:36:45.8244810Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-06T03:36:45.8275631Z ##[endgroup]
+2026-03-06T03:36:45.8276305Z ##[group]Setting up auth
+2026-03-06T03:36:45.8283703Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-06T03:36:45.8317058Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-06T03:36:45.8693064Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-06T03:36:45.8725821Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-06T03:36:45.8970708Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-06T03:36:45.9013617Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-06T03:36:45.9264695Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-06T03:36:45.9304538Z ##[endgroup]
+2026-03-06T03:36:45.9306024Z ##[group]Fetching the repository
+2026-03-06T03:36:45.9390399Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-03-06T03:36:46.2020687Z From https://github.com/ShujiM/test_web3D
+2026-03-06T03:36:46.2022691Z  * [new branch]      codex/create-index.html-for-test_web3d -> origin/codex/create-index.html-for-test_web3d
+2026-03-06T03:36:46.2026086Z  * [new branch]      codex/create-index.html-for-test_web3d-e64ul1 -> origin/codex/create-index.html-for-test_web3d-e64ul1
+2026-03-06T03:36:46.2028624Z  * [new branch]      codex/update-color-scheme-and-add-3dcg-tools-info -> origin/codex/update-color-scheme-and-add-3dcg-tools-info
+2026-03-06T03:36:46.2031383Z  * [new branch]      codex001_index01     -> origin/codex001_index01
+2026-03-06T03:36:46.2032527Z  * [new branch]      develop              -> origin/develop
+2026-03-06T03:36:46.2033631Z  * [new branch]      feature/add-3d-model -> origin/feature/add-3d-model
+2026-03-06T03:36:46.2034714Z  * [new branch]      main                 -> origin/main
+2026-03-06T03:36:46.2083073Z [command]/usr/bin/git branch --list --remote origin/main
+2026-03-06T03:36:46.2110206Z   origin/main
+2026-03-06T03:36:46.2121320Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-03-06T03:36:46.2147838Z e86c73ebc6526d397f174d20be1785ecdeb49161
+2026-03-06T03:36:46.2153663Z ##[endgroup]
+2026-03-06T03:36:46.2154865Z ##[group]Determining the checkout info
+2026-03-06T03:36:46.2156419Z ##[endgroup]
+2026-03-06T03:36:46.2159731Z [command]/usr/bin/git sparse-checkout disable
+2026-03-06T03:36:46.2199302Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-06T03:36:46.2226696Z ##[group]Checking out the ref
+2026-03-06T03:36:46.2231962Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-06T03:36:46.2873445Z Switched to a new branch 'main'
+2026-03-06T03:36:46.2874761Z branch 'main' set up to track 'origin/main'.
+2026-03-06T03:36:46.3137495Z ##[endgroup]
+2026-03-06T03:36:46.3176556Z [command]/usr/bin/git log -1 --format=%H
+2026-03-06T03:36:46.3202309Z e86c73ebc6526d397f174d20be1785ecdeb49161
+2026-03-06T03:36:46.3398664Z ##[group]Run sudo apt-get update
+2026-03-06T03:36:46.3399755Z [36;1msudo apt-get update[0m
+2026-03-06T03:36:46.3400790Z [36;1msudo apt-get install -y webp[0m
+2026-03-06T03:36:46.3456909Z shell: /usr/bin/bash -e {0}
+2026-03-06T03:36:46.3457519Z ##[endgroup]
+2026-03-06T03:36:46.4293824Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-03-06T03:36:46.4635996Z Hit:2 http://azure.archive.ubuntu.com/ubuntu noble InRelease
+2026-03-06T03:36:46.4655724Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-03-06T03:36:46.4695861Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-03-06T03:36:46.4752533Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-03-06T03:36:46.6059020Z Get:6 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1806 kB]
+2026-03-06T03:36:46.6226770Z Get:7 http://azure.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [332 kB]
+2026-03-06T03:36:46.6252247Z Get:8 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [177 kB]
+2026-03-06T03:36:46.6271009Z Get:9 http://azure.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [16.7 kB]
+2026-03-06T03:36:46.6279148Z Get:10 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1564 kB]
+2026-03-06T03:36:46.6363714Z Get:11 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [318 kB]
+2026-03-06T03:36:46.6388331Z Get:12 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [386 kB]
+2026-03-06T03:36:46.6414838Z Get:13 http://azure.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [32.9 kB]
+2026-03-06T03:36:46.6425352Z Get:14 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2747 kB]
+2026-03-06T03:36:46.6568380Z Get:18 https://packages.microsoft.com/repos/azure-cli noble InRelease [3564 B]
+2026-03-06T03:36:46.6576989Z Get:15 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [632 kB]
+2026-03-06T03:36:46.6607628Z Get:19 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-03-06T03:36:46.7020547Z Get:16 http://azure.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+2026-03-06T03:36:46.7026666Z Get:17 http://azure.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+2026-03-06T03:36:46.7036316Z Get:20 http://azure.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7300 B]
+2026-03-06T03:36:46.7047216Z Get:21 http://azure.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [10.5 kB]
+2026-03-06T03:36:46.7057320Z Get:22 http://azure.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [212 B]
+2026-03-06T03:36:46.7065356Z Get:23 http://azure.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+2026-03-06T03:36:46.7390940Z Get:24 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Packages [1504 kB]
+2026-03-06T03:36:46.7504973Z Get:25 http://azure.archive.ubuntu.com/ubuntu noble-security/main Translation-en [241 kB]
+2026-03-06T03:36:46.7530319Z Get:26 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 Components [21.5 kB]
+2026-03-06T03:36:46.7546484Z Get:27 http://azure.archive.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [10.1 kB]
+2026-03-06T03:36:46.7572688Z Get:28 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Packages [975 kB]
+2026-03-06T03:36:46.7617943Z Get:29 http://azure.archive.ubuntu.com/ubuntu noble-security/universe Translation-en [218 kB]
+2026-03-06T03:36:46.7649442Z Get:30 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 Components [74.2 kB]
+2026-03-06T03:36:46.7677393Z Get:31 http://azure.archive.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [20.6 kB]
+2026-03-06T03:36:46.8070866Z Get:36 https://packages.microsoft.com/repos/azure-cli noble/main amd64 Packages [2072 B]
+2026-03-06T03:36:46.8139620Z Get:32 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2599 kB]
+2026-03-06T03:36:46.8287529Z Get:33 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted Translation-en [600 kB]
+2026-03-06T03:36:46.8338822Z Get:34 http://azure.archive.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+2026-03-06T03:36:46.8357042Z Get:35 http://azure.archive.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+2026-03-06T03:36:46.8684093Z Get:37 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [11.4 kB]
+2026-03-06T03:36:46.8714439Z Get:38 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [76.6 kB]
+2026-03-06T03:36:46.8745676Z Get:39 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [97.9 kB]
+2026-03-06T03:36:52.6399608Z Fetched 14.9 MB in 2s (8666 kB/s)
+2026-03-06T03:36:53.4818170Z Reading package lists...
+2026-03-06T03:36:53.5184028Z Reading package lists...
+2026-03-06T03:36:53.7468083Z Building dependency tree...
+2026-03-06T03:36:53.7476323Z Reading state information...
+2026-03-06T03:36:54.0089568Z The following additional packages will be installed:
+2026-03-06T03:36:54.0100266Z   libgif7 libglut3.12 libopengl0
+2026-03-06T03:36:54.0321601Z The following NEW packages will be installed:
+2026-03-06T03:36:54.0330429Z   libgif7 libglut3.12 libopengl0 webp
+2026-03-06T03:36:54.0553809Z 0 upgraded, 4 newly installed, 0 to remove and 33 not upgraded.
+2026-03-06T03:36:54.0554591Z Need to get 268 kB of archives.
+2026-03-06T03:36:54.0555203Z After this operation, 1032 kB of additional disk space will be used.
+2026-03-06T03:36:54.0555826Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-03-06T03:36:54.1051249Z Get:2 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libgif7 amd64 5.2.2-1ubuntu1 [35.2 kB]
+2026-03-06T03:36:54.1390966Z Get:3 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 libglut3.12 amd64 3.4.0-1build1 [98.0 kB]
+2026-03-06T03:36:54.1717890Z Get:4 http://azure.archive.ubuntu.com/ubuntu noble/main amd64 libopengl0 amd64 1.7.0-1build1 [32.8 kB]
+2026-03-06T03:36:54.1937755Z Get:5 http://azure.archive.ubuntu.com/ubuntu noble/universe amd64 webp amd64 1.3.2-0.4build3 [103 kB]
+2026-03-06T03:36:54.4789546Z Fetched 268 kB in 0s (1780 kB/s)
+2026-03-06T03:36:54.5040148Z Selecting previously unselected package libgif7:amd64.
+2026-03-06T03:36:54.5401999Z (Reading database ... 
+2026-03-06T03:36:54.5402741Z (Reading database ... 5%
+2026-03-06T03:36:54.5403482Z (Reading database ... 10%
+2026-03-06T03:36:54.5403960Z (Reading database ... 15%
+2026-03-06T03:36:54.5404459Z (Reading database ... 20%
+2026-03-06T03:36:54.5405030Z (Reading database ... 25%
+2026-03-06T03:36:54.5405505Z (Reading database ... 30%
+2026-03-06T03:36:54.5406807Z (Reading database ... 35%
+2026-03-06T03:36:54.5407355Z (Reading database ... 40%
+2026-03-06T03:36:54.5407817Z (Reading database ... 45%
+2026-03-06T03:36:54.5408416Z (Reading database ... 50%
+2026-03-06T03:36:54.5533165Z (Reading database ... 55%
+2026-03-06T03:36:54.6313767Z (Reading database ... 60%
+2026-03-06T03:36:54.6744505Z (Reading database ... 65%
+2026-03-06T03:36:54.7136106Z (Reading database ... 70%
+2026-03-06T03:36:54.7566132Z (Reading database ... 75%
+2026-03-06T03:36:54.8847720Z (Reading database ... 80%
+2026-03-06T03:36:55.1332838Z (Reading database ... 85%
+2026-03-06T03:36:55.3525874Z (Reading database ... 90%
+2026-03-06T03:36:55.5266828Z (Reading database ... 95%
+2026-03-06T03:36:55.5267381Z (Reading database ... 100%
+2026-03-06T03:36:55.5268055Z (Reading database ... 219118 files and directories currently installed.)
+2026-03-06T03:36:55.5314531Z Preparing to unpack .../libgif7_5.2.2-1ubuntu1_amd64.deb ...
+2026-03-06T03:36:55.5347734Z Unpacking libgif7:amd64 (5.2.2-1ubuntu1) ...
+2026-03-06T03:36:55.5600483Z Selecting previously unselected package libglut3.12:amd64.
+2026-03-06T03:36:55.5765864Z Preparing to unpack .../libglut3.12_3.4.0-1build1_amd64.deb ...
+2026-03-06T03:36:55.5777251Z Unpacking libglut3.12:amd64 (3.4.0-1build1) ...
+2026-03-06T03:36:55.6056803Z Selecting previously unselected package libopengl0:amd64.
+2026-03-06T03:36:55.6221513Z Preparing to unpack .../libopengl0_1.7.0-1build1_amd64.deb ...
+2026-03-06T03:36:55.6234630Z Unpacking libopengl0:amd64 (1.7.0-1build1) ...
+2026-03-06T03:36:55.6474618Z Selecting previously unselected package webp.
+2026-03-06T03:36:55.6636610Z Preparing to unpack .../webp_1.3.2-0.4build3_amd64.deb ...
+2026-03-06T03:36:55.6646532Z Unpacking webp (1.3.2-0.4build3) ...
+2026-03-06T03:36:55.7192516Z Setting up libopengl0:amd64 (1.7.0-1build1) ...
+2026-03-06T03:36:55.7221365Z Setting up libglut3.12:amd64 (3.4.0-1build1) ...
+2026-03-06T03:36:55.7246463Z Setting up libgif7:amd64 (5.2.2-1ubuntu1) ...
+2026-03-06T03:36:55.7277621Z Setting up webp (1.3.2-0.4build3) ...
+2026-03-06T03:36:55.7349843Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-03-06T03:36:55.7380114Z Not building database; man-db/auto-update is not 'true'.
+2026-03-06T03:36:55.7398214Z Processing triggers for libc-bin (2.39-0ubuntu8.7) ...
+2026-03-06T03:36:56.4731408Z 
+2026-03-06T03:36:56.4732262Z Running kernel seems to be up-to-date.
+2026-03-06T03:36:56.4732846Z 
+2026-03-06T03:36:56.4733256Z No services need to be restarted.
+2026-03-06T03:36:56.4733728Z 
+2026-03-06T03:36:56.4734045Z No containers need to be restarted.
+2026-03-06T03:36:56.4734423Z 
+2026-03-06T03:36:56.4734604Z No user sessions are running outdated binaries.
+2026-03-06T03:36:56.4734916Z 
+2026-03-06T03:36:56.4735224Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-03-06T03:36:57.6424902Z ##[group]Run find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) ! -path "./node_modules/*" ! -path "./.git/*" -print0 | while IFS= read -r -d '' file; do
+2026-03-06T03:36:57.6425956Z [36;1mfind . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" \) ! -path "./node_modules/*" ! -path "./.git/*" -print0 | while IFS= read -r -d '' file; do[0m
+2026-03-06T03:36:57.6426554Z [36;1m  output="${file%.*}.webp"[0m
+2026-03-06T03:36:57.6426818Z [36;1m  if cwebp "$file" -o "$output" 2>&1; then[0m
+2026-03-06T03:36:57.6427113Z [36;1m    echo "Converted: $file -> $output"[0m
+2026-03-06T03:36:57.6427367Z [36;1m    rm "$file"[0m
+2026-03-06T03:36:57.6427549Z [36;1m  else[0m
+2026-03-06T03:36:57.6427754Z [36;1m    echo "Warning: Failed to convert $file"[0m
+2026-03-06T03:36:57.6428003Z [36;1m  fi[0m
+2026-03-06T03:36:57.6428163Z [36;1mdone[0m
+2026-03-06T03:36:57.6480749Z shell: /usr/bin/bash -e {0}
+2026-03-06T03:36:57.6480987Z ##[endgroup]
+2026-03-06T03:36:57.6898649Z Error! Could not process file ./img/ComfyUI_00012_.png
+2026-03-06T03:36:57.6899740Z Error! Cannot read input picture file './img/ComfyUI_00012_.png'
+2026-03-06T03:36:57.6903788Z Warning: Failed to convert ./img/ComfyUI_00012_.png
+2026-03-06T03:36:57.6929804Z Error! Could not process file ./img/ComfyUI_00015.png
+2026-03-06T03:36:57.6930772Z Error! Cannot read input picture file './img/ComfyUI_00015.png'
+2026-03-06T03:36:57.6933383Z Warning: Failed to convert ./img/ComfyUI_00015.png
+2026-03-06T03:36:57.6967635Z ##[group]Run git config --local user.email "action@github.com"
+2026-03-06T03:36:57.6968074Z [36;1mgit config --local user.email "action@github.com"[0m
+2026-03-06T03:36:57.6968412Z [36;1mgit config --local user.name "GitHub Action"[0m
+2026-03-06T03:36:57.6968677Z [36;1mgit add -A[0m
+2026-03-06T03:36:57.6968999Z [36;1mgit diff --staged --quiet || git commit -m "ci: convert images to WebP format"[0m
+2026-03-06T03:36:57.7020695Z shell: /usr/bin/bash -e {0}
+2026-03-06T03:36:57.7020930Z ##[endgroup]
+2026-03-06T03:36:57.7407753Z ##[group]Run git push
+2026-03-06T03:36:57.7407998Z [36;1mgit push[0m
+2026-03-06T03:36:57.7461358Z shell: /usr/bin/bash -e {0}
+2026-03-06T03:36:57.7461603Z ##[endgroup]
+2026-03-06T03:36:58.1079556Z Everything up-to-date
+2026-03-06T03:36:58.1268712Z Post job cleanup.
+2026-03-06T03:36:58.2275753Z [command]/usr/bin/git version
+2026-03-06T03:36:58.2315877Z git version 2.53.0
+2026-03-06T03:36:58.2364771Z Temporarily overriding HOME='/home/runner/work/_temp/bceba16a-29f8-4049-8155-ca1d08fe301c' before making global git config changes
+2026-03-06T03:36:58.2366041Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-06T03:36:58.2372255Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/test_web3D/test_web3D
+2026-03-06T03:36:58.2422148Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-06T03:36:58.2460946Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-06T03:36:58.2718131Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-06T03:36:58.2744098Z http.https://github.com/.extraheader
+2026-03-06T03:36:58.2757516Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-06T03:36:58.2793109Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-06T03:36:58.3045905Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-06T03:36:58.3087715Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-06T03:36:58.3515139Z Cleaning up orphan processes
