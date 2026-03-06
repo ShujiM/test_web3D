@@ -1,0 +1,4 @@
+# 3DCG/OS temporary files
+*.blend1
+Thumbs.db
+.DS_Store
